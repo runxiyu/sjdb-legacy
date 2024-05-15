@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Help Doc for Editors</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap">
+	<link rel="stylesheet" href="files/styles.css">
+	<style>
+		li.ps {
+			color: rgb(150, 150, 150);
+			list-style-type: square;
+		}
+		.verb {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Help Doc for Editors</h1>
+	</header>
+	<article>
+		<p>Welcome! This document can help you learn the principle mechanisms of the Daily Bulletin project, and make you a successful editor of the Daily Bulletin. This article might seem a bit long because we aim to include every detail to avoid ambiguity, but the editing process is quite simple once you get used to it. </p>
+		<h2>Before You Attempt to Start</h2>
+		<p>As an editor, you need some basic knowledge to understand how things should work. You need to:</p>
+		<ul>
+			<li>
+				<span class="verb">Know</span> what happens in a <strong>typical day in YK Pao School</strong>. To complete this step, you probably need to be a staff or student in the school. With such knowledge, you can understand the significance of each part of the Daily Bulletin.
+			</li>
+			<li>
+				<span class="verb">Know</span> <strong>HTML</strong> and <strong>CSS</strong>. HTML is the standard markup language for Web pages; CSS is the language we use to style an HTML document. With such knowledge, you can edit web pages without pressure. You can learn HTML and CSS with <a href="https://developer.mozilla.org/en-US/docs/Learn">MDN</a>.
+			</li>
+			<li>
+				<span class="verb">Know</span> <strong>Python</strong>. Python is a popular programming language. In this project, Python scripts are used to generate most of the HTML codes. With such knowledge, you know what to do when you need to alter the auto-generated parts. You can learn Python with <a href="https://docs.python.org/3/">Python Docs</a> <span class="ps">and IGCSE Computer Science</span>.
+			</li>
+			<li>
+				<span class="verb">Know</span> <strong>Git</strong>. Git is a version control system for software development. Our website is based on GitHub, which relies on Git for updates. With such knowledge, you know what to do update the website every day. You can get to know Git with <a href="https://docs.github.com/en/">GitHub Docs</a>.
+			</li>
+			<li>
+				<span class="verb">Know</span> important <strong>Python libraries</strong>, including but not limited to <code>re</code>, <code>os</code>, <code>datetime</code>, <code>PyPDF2</code>, and <code>BeautifulSoup</code>. They are utilized in many of the Python scripts, and you might need to understand their logic.
+			</li>
+			<li>
+				<span class="verb">Know</span> <strong>this document</strong> well. Specifically, there are some rules to make the document more readable: 
+				<ul>
+					<li>
+						Verbs indicating what you need to do are marked like <span class="verb">this</span>.
+					</li>
+					<li>
+						<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr> is an abbreviation for "Day After a Weekend or a Holiday". <abbr title="Day Before a Weekend or a Holiday">DBWOH</abbr> is an abbreviation for "Day Before a Weekend or a Holiday". 
+					</li>
+					<li>
+						The names of some files might vary due to time, so they are given temporary names in this document enclosed by <code>{}</code>. Some examples are <code>{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> or <code>{next-day}.html</code>. Keep in mind that these names should actually represent a date in the <code>yyyy-mm-dd</code> convention, like <code><time datetime="2024-01-01">2024-01-01</time></code>.
+					</li>
+					<li>
+						The names of other files with an external source might vary as well, so they are given temporary names enclosed by <code>[]</code>. Some examples are <code>[menu].pdf</code> or <code>[picture].png</code>. Note that these names should be replaced with the real names of these external files. 
+					</li>
+				</ul>
+			</li>
+			<li>
+				Lastly but most importantly, <span class="verb">keep</span> an <strong>open mindset</strong>. Be kind to your creative ideas and others' personal opinions. You should consider to: 
+				<ul>
+					<li>
+						<span class="verb">Integrate</span> new thoughts and designs into the Daily Bulletin whenever possible.
+					</li>
+					<li>
+						<span class="verb">Respect</span> suggestions from others, even if they sound unprofessional.
+					</li>
+					<li>
+						<span class="verb">Accept</span> and <span class="verb">publish</span> inspirations from others, no matter what opinions these shared contents represent, as long as they are generally factual, friendly, and safe.
+					</li>
+					<li>
+						<span class="verb">Rephrase</span> certain sentences in others' inspirations to reduce bias if needed, but never insert your own bias.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Keep in mind that you do not need to be an expert in the above fields. You must understand the basics, but you only need to understand the basics. You can learn more if you need by peeking into the previous source codes or consulting ChatGPT.</p>
+		<h2>As You Start</h2>
+		<p>This section gives you an outline and a check-list of what you should try do so that you can start to run the programs. The first steps should be easy, but some could be if you have little programming experience. If you encounter any problems, consult ChatGPT or any tech person around you.</p>
+		<ul>
+			<li>
+				<span class="verb">Clone</span> the <strong>repository</strong> of the Daily Bulletin. <span class="verb">Run</span> the command <code>git clone https://github.com/albertttan/albertttan.github.io.git</code> in Terminal.
+			</li>
+			<li>
+				<span class="verb">Download</span> other <strong>source files</strong> of the Daily Bulletin, including the various Python scripts.
+			</li>
+			<li>
+				<span class="verb">Download</span> and <span class="verb">install</span> a <strong>web browser</strong>. <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> is a personal recommendation, but any relatively modern browser <span class="ps">i.e. not IE</span> like Chrome, Safari and Edge should do.
+			</li>
+			<li>
+				<span class="verb">Download</span> and <span class="verb">install</span> a <strong>text editor</strong> to edit and run HTML and Python files. <a href="https://www.sublimetext.com/">Sublime Text</a> is a personal recommendation, but a simple combination of Python's IDLE and macOS's TextEdit can work as well.
+			</li>
+			<li>
+				<span class="verb">Download</span> and <span class="verb">install</span> <strong>Python</strong>, from the <a href="https://www.python.org/downloads/">official Python website</a> or with <a href="https://brew.sh">Homebrew</a>.
+			</li>
+			<li>
+				<span class="verb">Download</span> and <span class="verb">install</span> related <strong>Python libraries</strong>. You need to download <code>PyPDF2</code> and <code>beautifulsoup4</code>. <span class="verb">Run</span> the command <code>pip install PyPDF2 beautifulsoup4</code> in Terminal.
+			</li>
+			<li>
+				<span class="verb">Check</span> if the next day is a <strong>school day</strong>. 
+				<ul>
+					<li>
+						If it is, <span class="verb">continue</span> on to create a Daily Bulletin.
+					</li>
+					<li>
+						If it is not, <span class="verb">stop</span>. You do not need to create a Daily Bulletin for a weekend or a holiday.
+					</li>
+				</ul>
+			</li>
+			<li class="ps">
+				The scripts are designed so that you can easily compile the Daily Bulletin for <strong>the next day</strong>. For example, if you run the scripts on <time datetime="2024-01-01">2024-01-01</time>, the Daily Bulletin for <time datetime="2024-01-02">2024-01-02</time> will be created. This also means that it is much more difficult for you to create a Daily Bulletin for any day other than the next day, so don't procrastinate or attempt to do your job early!
+			</li>
+			<li>
+				<span class="verb">Check</span> if the next day is a <strong><abbr title="Day After a Weekend or a Holiday">DAWOH</abbr></strong>.
+				<ul>
+					<li>
+						If it is, <span class="verb">continue</span> to the following section. There are more steps you need to complete for a <abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>. 
+					</li>
+					<li>
+						If it is not, <span class="verb">skip</span> the following section and <span class="verb">continue</span> to the next.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Now you are ready.</p>
+		<h2>If the Next Day is a <abbr title="Day After a Weekend or a Holiday">DAWOH</abbr></h2>
+		<p>First, you need to download some files.</p>
+		<ul>
+			<li>
+				<span class="verb">Download</span> <strong>Menu of the Week</strong>. 
+				<ul>
+					<li>
+						<span class="verb">Find</span> the link to it in an email sent by <a href="mailto:parentconnect@ykpaoschool.cn">Parent Connect</a> after school every <abbr title="Day Before a Weekend or a Holiday">DBWOH</abbr>.
+					</li>
+					<li>
+						<span class="verb">Download</span> <code>[menu].pdf</code>.
+					</li>
+					<li>
+						<span class="verb">Rename</span> <code>[menu].pdf</code> as <code>{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.pdf</code>.
+					</li>
+					<li>
+						<span class="verb">Place</span> <code>{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.pdf</code> in the <code>menu/</code> folder.
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.pdf</code> and keep it open.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="verb">Download</span> <strong>The Week Ahead</strong>. 
+				<ul>
+					<li>
+						<span class="verb">Find</span> the link to it in an email sent by <a href="mailto:slo@ykpaoschool.cn">SLO</a> on <time datetime="2023-09-03">3<sup>rd</sup> Sep 2023</time>. 
+					</li>
+					<li>
+						<span class="verb">Download</span> <code>The Week Ahead 本周展望.pptx</code>.
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>The Week Ahead 本周展望.pptx</code> and keep it open.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Next, you need to do some manual editings.</p>
+		<ul>
+			<li><strong>Community Time</strong>. 
+				<ul>
+					<li>
+						<span class="verb">Navigate</span> to <code>community_time/</code>.
+					</li>
+					<li>
+						<span class="verb">Duplicate</span> <code>community_time/{last-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> to <code>community_time/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>community_time/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>community_time/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>: <span class="verb">update</span> the information according to The Week Ahead.
+					</li>
+					<li>
+						<span class="verb">Save</span> and <span class="verb">close</span> <code>community_time/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+					</li>
+				</ul>
+			</li>
+			<li><strong>Important Events</strong>. 
+				<ul>
+					<li>
+						<span class="verb">Navigate</span> to <code>important_events/</code>.
+					</li>
+					<li>
+						<span class="verb">Duplicate</span> <code>important_events/{last-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> to <code>important_events/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>important_events/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>important_events/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>: <span class="verb">update</span> the information according to <a href="https://outlook.office.com/calendar/view/month">Outlook Calendar</a>.</li>
+					<li>
+						<span class="verb">Save</span> and <span class="verb">close</span> <code>important_events/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+					</li>
+					<li class="ps">
+						If you cannot see any events in your calendar, follow the instructions in this <a href="files/calendar_instructions.pdf">document</a>.
+					</li>
+				</ul>
+			</li>
+			<li><strong>Notices</strong>.
+				<ul>
+					<li>
+						<span class="verb">Open</span> <code>part_regular_notices.html</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Navigate</span> to <code>notices/</code>.
+					</li>
+					<li>
+						<span class="verb">Rename</span> <code>notices/latest.html</code> to <code>notices/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>notices/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> with your text editor. 
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>part_regular_notices.html</code>: <span class="verb">find</span> and <span class="verb">clear</span> anything in <code>part_regular_notices.html</code> that are not in The Week Ahead anymore.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>part_regular_notices.html</code>: <span class="verb">find</span> anything in <code>notices/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> that still appear in The Week Ahead; <span class="verb">copy</span> these contents and <span class="verb">paste</span> them into <code>part_regular_notices.html</code>. 
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>notices/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>: <span class="verb">clear</span> everything in <code>notices/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>notices/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>: <span class="verb">find</span> every notice in The Week Ahead that did not appear in the last The Week Ahead; <span class="verb">include</span> these notices in <code>notices/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>. 
+					</li>
+					<li>
+						<span class="verb">Save</span> and <span class="verb">close</span> <code>part_regular_notices.html</code> and <code>notices/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+					</li>
+					<li class="ps">When you edit, do not just copy and paste from the PowerPoint: remember to use HTML syntax.</li>
+				</ul>
+			</li>
+			<li><strong>The School Inspires</strong>.
+				<ul>
+					<li>
+						<span class="verb">Open</span> <code>part_school_inspires.html</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>part_school_inspires.html</code>: <span class="verb">clear</span> everything in <code>part_school_inspires.html</code>.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>part_school_inspires.html</code>: <span class="verb">find</span> every inspiration in The Week Ahead; <span class="verb">include</span> these inspirations in <code>part_school_inspires.html</code>. 
+					</li>
+					<li>
+						<span class="verb">Save</span> and <span class="verb">close</span> <code>part_school_inspires.html</code>.
+					</li>
+					<li class="ps">
+						Poems, quotes, cartoons, and pictures are generally classified as inspirations. 
+					</li>
+				</ul>
+			</li>
+			<li><strong>The School Recommends</strong>.
+				<ul>
+					<li>
+						<span class="verb">Open</span> <code>part_school_recommends.html</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>part_school_recommends.html</code>: <span class="verb">clear</span> everything in <code>part_school_recommends.html</code>.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>part_school_recommends.html</code>: <span class="verb">find</span> every recommendation in The Week Ahead; <span class="verb">include</span> these recommendations in <code>part_school_recommends.html</code>. 
+					</li>
+					<li>
+						<span class="verb">Save</span> and <span class="verb">close</span> <code>part_school_recommends.html</code>.
+					</li>
+					<li class="ps">
+						Articles talking about movies, people, activities, and exhibitions are generally classified as recommendations. 
+					</li>
+				</ul>
+			</li>
+			<li><strong>Delicious Dinings</strong>. 
+				<ul>
+					<li>
+						<span class="verb">Navigate</span> to <code>menu</code>.
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>menu/menu_weekly.py</code> with your text editor. 
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>menu/menu_weekly.py</code>: <span class="verb">find</span> three blocks of lists named <var>breakfast_info</var>, <var>lunch_info</var>, and <var>dinner_info</var>; <span class="verb">update</span> the information according to <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.pdf</code>.
+					</li>
+					<li class="ps">
+						Specifically, the rows and columns of these lists correspond with the rows and columns of the new menu. <code>0</code> should mark empty grids in the menu and grids that span multiple rows, while <code>1</code> should mark normal grids. 
+					</li>
+					<li>
+						<span class="verb">Save</span> <code>menu/menu_weekly.py</code>.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Next, you need to run a script.</p>
+		<ul>
+			<li><strong>Delicious Dinings</strong>. 
+				<ul>
+					<li>
+						<span class="verb">Run</span> <code>menu/menu_weekly.py</code>.
+					</li>
+					<li class="ps">
+						This can be achieved by pressing <kbd>⌘+B</kbd> in Sublime Text or <kbd>F5</kbd> in IDLE.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Finally, you need to do some more manual editings.</p>
+		<ul>
+			<li><strong>Delicious Dinings</strong>. 
+				<ul>
+					<li>
+						<span class="verb">Open</span> <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> with your text editor. 
+					</li>
+					<li>
+						<span class="verb">Check</span> if the auto-filled contents correspond to the contents displayed in <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.pdf</code>. 
+						<ul>
+							<li>
+								If everything is correct, <span class="verb">continue</span>.
+							</li>
+							<li>
+								If the amount of errors are acceptable, <span class="verb">edit</span> <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code> manually.
+							</li>
+							<li>
+								If there are numerous errors, re-<span class="verb">edit</span> and re-<span class="verb">run</span> <code>menu/menu_weekly.py</code> to regenerate <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+							</li>
+						</ul>
+					</li>
+					<li class="ps">
+						Keep in mind that the table has been filtered and transposed.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>: <span class="verb">correct</span> capitalization, spacing, spelling, and punctuation errors in each grid. 
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>: <span class="verb">adjust</span> and <span class="verb">fill</span> grids that span multiple columns according to <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.pdf</code>. 
+					</li>
+					<li class="ps">
+						You can adjust the width occupied by such grids with the attribute <code>rowspan</code> after you remove excessive grids. 
+					</li>
+					<li>
+						<span class="verb">Save</span> and <span class="verb">close</span> <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.html</code>.
+					</li>
+					<li>
+						<span class="verb">Close</span> <code>menu/{this-<abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>}.pdf</code>.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Great. Now you are ready to move on to the next part.</p>
+		<h2>What You Should Do Every Day</h2>
+		<p>First, you need to do some manual editings.</p>
+		<ul>
+			<li><b>Daily Inspiration</b>.
+				<ul>
+					<li>
+						<span class="verb">Navigate</span> to <code>daily_inspiration/</code>.
+					</li>
+					<li>
+						<span class="verb">Check</span> if the next day is a <abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>.
+						<ul>
+							<li>
+								If it is, <span class="verb">duplicate</span> <code>daily_inspiration/{last-<abbr title="Day Before a Weekend or a Holiday">DBWOH</abbr>}.html</code> to <code>daily_inspiration/{next-day}.html</code>. 
+							</li>
+							<li>
+								If it is not, <span class="verb">duplicate</span> <code>daily_inspiration/{today}.html</code> to <code>daily_inspiration/{next-day}.html</code>. 
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>daily_inspiration/{next-day}.html</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>daily_inspiration/{next-day}.html</code>: <span class="verb">clear</span> everything in <code>daily_inspiration/{next-day}.html</code>.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>daily_inspiration/{next-day}.html</code>: <span class="verb">include</span> 1 to 3 gathered inspirations in <code>daily_inspiration/{next-day}.html</code>.
+					</li>
+					<li class="ps">
+						You should have inspirations submitted to you through Microsoft Forms. Feel free to include your own inspiration, especially when you are running short of submitted inspirations. Feel free to collect inspirations from people around you actively, but ask for consent. Respect others if they want to keep their inspirations anonymous. 
+					</li>
+					<li>
+						<span class="verb">Check</span> if you need to include images in <code>daily_inspiration/{next-day}.html</code>.
+						<ul>
+							<li>
+								If you do need to include images, <span class="verb">continue</span> with the following example of <code>[picture].png</code>.
+							</li>
+							<li>
+								If you do not need to include images, <span class="verb">skip</span> the following steps; <span class="verb">save</span> and <span class="verb">close </span> <code>daily_inspiration/{next-day}.html</code>.
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="verb">Compress</span> <code>[picture].png </code> to <code>[picture]_compressed.jpeg</code>. 
+					</li>
+					<li class="ps">
+						You can compress through scaling down and / or reducing image quality. It is a good idea to first use macOS' build-in "Convert Image" to turn every picture into a JPEG file scaled down to the size "Large", then use ImageMagick to increase the compression ratio. Aim for no more than 100 kilobytes per picture along with an acceptable quality.
+					</li>
+					<li>
+						<span class="verb">Place</span> <code>[picture]_compressed.jpeg</code> in the <code>files/</code> folder. 
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>daily_inspiration/{next-day}.html</code>: <span class="verb">link</span> the <code>src</code> of the <code>&lt;img&gt;</code> element to <code>files/[picture]_compressed.jpeg</code>.
+					</li>
+					<li>
+						<span class="verb">Copy</span> <code>files/[picture]_compressed.jpeg</code> to the Git repository.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Next, you need to run a script.</p>
+		<ul>
+			<li><b>Concatenate HTML</b>.
+				<ul>
+					<li>
+						<span class="verb">Check</span> that your internet is configured so that it is able to open <code>https://www.wikipedia.org</code>.
+						<ul>
+							<li>
+								If it is, <span class="verb">continue</span>.
+							</li>
+							<li>
+								If it is not, do your best to <span class="verb">configure</span> your internet.
+							</li>
+						</ul>
+					</li>
+					<li class="ps">
+						The script you run will call another script to fetch the <code>In the News</code> section from Wikipedia. Therefore, you must be able to access Wikipedia.
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>concat.py</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Run</span> <code>concat.py</code>.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Next, you need to do some more manual editings.</p>
+		<ul>
+			<li><b>Edit HTML</b>.
+				<ul>
+					<li>
+						<span class="verb">Navigate</span> to <code>html/</code>.
+					</li>
+					<li>
+						<span class="verb">Open</span> <code>html/{next-day}.html</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Edit</span> <code>html/{next-day}.html</code>: <span class="verb">find</span> <code>Day *</code> in <code>&lt;html&gt; → &lt;body&gt; → &lt;header&gt; → &lt;p&gt;</code>; replace <code>*</code> with the real day of the cycle. 
+					</li>
+					<li>
+						<span class="verb">Check</span> if the auto-filled contents are correct. 
+						<ul>
+							<li>
+								If everything is correct, <span class="verb">continue</span>.
+							</li>
+							<li>
+								If the amount of errors are acceptable, <span class="verb">edit</span> <code>html/{next-day}.html</code> manually.
+							</li>
+							<li>
+								If there are numerous errors, re-<span class="verb">edit</span> the documents responsible for whichever section that goes wrong; re-<span class="verb">run</span> <code>concat.py</code> to regenerate <code>html/{next-day}.html</code>.
+							</li>
+						</ul>
+					</li>
+					<li class="ps">
+						Keep in mind that the pictures cannot and should not display normally because they are under the <code>files/</code> directory, which is not present under the <code>html</code> directory. To check the pictures, you can temporarily move <code>html/{next-day}.html</code> to <code>{next-day}.html</code> under the main directory, but do not forget to move it back.
+					</li>
+					<li>
+						<span class="verb">Check</span> if the next day is a <abbr title="Day After a Weekend or a Holiday">DAWOH</abbr>.
+						<ul>
+							<li>
+								If it is, <span class="verb">edit</span> the <code>On this Day</code> section in <code>html/{next-day}.html</code> to <span class="verb">include</span> the titles of all the days in the weekend or holiday as described in the files under <code>on_this_day/</code> and <code>on_this_day_zh/</code>.
+							</li>
+							<li>
+								If it is not, <span class="verb">continue</span>. 
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span class="verb">Check</span> if everything in <code>html/{next-day}.html</code> is safe for you to publish, especially under the sections <code>On this Day</code> and <code>In the News</code>.
+						<ul>
+							<li>
+								If it is, <span class="verb">continue</span>. 
+							</li>
+							<li>
+								If it is not, <span class="verb">clear</span> everything unsafe in <code>html/{next-day}.html</code>. 
+							</li>
+						</ul>
+					</li>
+					<li class="ps">
+						We need to do our best to keep an open mindset, but it is always a good idea to maintain the longevity of you and Daily Bulletin as a whole. You can choose to delete the single <code>&lt;li&gt;</code> element, delete the entire section, or state that we have a technical problem.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Next, you need to run another script.</p>
+		<ul>
+			<li><b>Pack HTML</b>.
+				<ul>
+					<li>
+						<span class="verb">Open</span> <code>pack.py</code> with your text editor.
+					</li>
+					<li>
+						<span class="verb">Run</span> <code>pack.py</code>.
+					</li>
+					<li class="ps">
+						This should always be the last script you run every day. Run this script once you made any changes to <code>html/{next-day}.html</code>, manual or automatic. This script packs your HTML into an email message, copies your HTML to the Git repository, and pushes your changes. You need a token for your first push to the git repository, but then the script will work fine.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Finally, you need to send the email.</p>
+		<ul>
+			<li class="ps">
+				Since different email clients work very differently, this part only shows a brief idea of what you should do. Specific implementations might vary.
+			</li>
+			<li>
+				<span class="verb">Place</span> <code>eml/{next-day}.eml</code> to the <code>Drafts</code> folder in your email client.
+			</li>
+			<li>
+				<span class="verb">Open</span> this draft.
+			</li>
+			<li>
+				<span class="verb">Choose</span> <code>Send Later</code> to send the email at 06:30 the next day.
+			</li>
+		</ul>
+		<p>Congratulations! You've done your job. Sleep well!</p>
+	</article>
+	<footer>
+		<p><a href="./">Home Page</a> · <a href="archive.html">Archive</a> · <a href="mailto:s22505@ykpaoschool.cn">Contact</a></p>
+	</footer>
+</body>
+</html>

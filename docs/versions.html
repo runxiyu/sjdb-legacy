@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Change Logs</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="files/styles.css">
+	<style>
+		.crucial-label {
+			display: inline-block;
+			color: white;
+			font-weight: bold;
+			font-size: smaller;
+			padding-top: 1px;
+			padding-bottom: 1px;
+			padding-left: 2px;
+			padding-right: 2px;
+			background-color: rgb(200, 80, 95);
+		}
+		.major-label {
+			display: inline-block;
+			color: white;
+			font-weight: bold;
+			font-size: smaller;
+			padding-top: 1px;
+			padding-bottom: 1px;
+			padding-left: 2px;
+			padding-right: 2px;
+			background-color: rgb(200, 150, 75);
+		}
+		.minor-label {
+			display: inline-block;
+			color: white;
+			font-weight: bold;
+			font-size: smaller;
+			padding-top: 1px;
+			padding-bottom: 1px;
+			padding-left: 2px;
+			padding-right: 2px;
+			background-color: rgb(100, 175, 100);
+		}
+		.crucial {
+			display: inline-block;
+			color: rgb(200, 80, 95);
+			font-weight: bold;
+		}
+		.major {
+			display: inline-block;
+			color: rgb(200, 150, 75);
+			font-weight: bold;
+		}
+		.minor {
+			display: inline-block;
+			color: rgb(100, 175, 100); 
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Change Logs</h1>
+	</header>
+	<article>
+		<p>This page lists the process of the development of Daily Bulletin.</p>
+		<h2>Alpha Test</h2>
+		<ul>
+			<li>
+				<span class="crucial-label">Crucial</span> <a href="2023-09-13.html"><time datetime="2023-09-13">2023-09-13</time></a>
+				<ul>
+					<li>
+						<span class="crucial">Contents</span> First demo finished manually, which contains most key sections.
+					</li>
+					<li>
+						<span class="crucial">Styling</span> First demo finished manually, which contains the first CSS version.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="crucial-label">Crucial</span> <a href="2023-09-18.html"><time datetime="2023-09-18">2023-09-18</time></a>
+				<ul>
+					<li>
+						<span class="crucial">Distribution</span> First experiments with email distribution.
+					</li>
+					<li>
+						<span class="crucial">Programming</span> Programs can now generate "On this Day", "In the News", and "Delicious Dinings".
+					</li>
+					<li>
+						<span class="crucial">Programming</span> Programs can now turn HTML into EML for distribution.
+					</li>
+					<li>
+						<span class="minor">Contents</span> The exact date and a link to relevant Wikipedia pages are included in the section "On this Day".
+					</li>
+					<li>
+						<span class="minor">Contents</span> The section "Recommended by School" turns into "The School Recommends".
+					</li>
+					<li>
+						<span class="minor">Styling</span> Slight changes in maximum page width and font size.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2>Beta Test</h2>
+		<ul>
+			<li>
+				<span class="major-label">Major</span> <a href="2023-09-19.html"><time datetime="2023-09-19">2023-09-19</time></a>
+				<ul>
+					<li>
+						<span class="major">Distribution</span> Successful attempts at wider email distribution.
+					</li>
+					<li>
+						<span class="major">Programming</span> A JSON file allow recipients to be automatically included in the EML.
+					</li>
+					<li>
+						<span class="major">Contents</span> An introductory paragraph is included under the title.
+					</li>
+					<li>
+						<span class="major">Community</span> A Microsoft Form is created to gather inspirations from the community.
+					</li>
+					<li>
+						<span class="minor">Contents</span> The day of the week under the title is displayed in a full word instead of an abbreviation. 
+					</li>
+					<li>
+						<span class="minor">Contents</span> "Daily Inspiration" now features a flexible amount of inspirations.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="crucial-label">Crucial</span> <a href="2023-09-21.html"><time datetime="2023-09-21">2023-09-21</time></a>
+				<ul>
+					<li>
+						<span class="crucial">Distribution</span> First attempts at online versions are posted on <code>https://users.andrewyu.org/</code>.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="minor-label">Minor</span> <a href="2023-09-22.html"><time datetime="2023-09-22">2023-09-22</time></a>
+				<ul>
+					<li>
+						<span class="minor">Styling</span> Some paragraph breaks are replaced with <code>&lt;br&gt;</code> line breaks.
+					</li>
+					<li>
+						<span class="minor">Styling</span> The section "New Notices" is moved down.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="major-label">Major</span> <a href="2023-09-25.html"><time datetime="2023-09-25">2023-09-25</time></a>
+				<ul>
+					<li>
+						<span class="major">Contents</span> Part of "The School Recommends" is taken out as a new section "The School Inspires".
+					</li>
+					<li>
+						<span class="major">Styling</span> Successful attempts at directly embedding pictures in HTML with base 64.
+					</li>
+					<li>
+						<span class="minor">Contents</span> Brief information about the past weekend is included in the section "On this Day".
+					</li>
+					<li>
+						<span class="minor">Styling</span> Paddings are added above headers for better visual experience.
+					</li>
+					<li>
+						<span class="minor">Styling</span> <code>&lt;time&gt;</code> element is utilized to formalize time representations.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="major-label">Major</span> <a href="2023-09-26.html"><time datetime="2023-09-26">2023-09-26</time></a>
+				<ul>
+					<li>
+						<span class="major">Styling</span> Google Fonts is used to enhance cross-platform experience.
+					</li>
+					<li>
+						<span class="minor">Styling</span> Padding above <code>&lt;h1&gt;</code> header is removed for better visual experience.
+					</li>
+					<li>
+						<span class="minor">Styling</span> Table columns now have a minimum width.
+					</li>
+					<li>
+						<span class="minor">Styling</span> "New Notices" is renamed as "Rather New Notices" and moved down when no longer new.
+					</li>
+					<li>
+						<span class="minor">Styling</span> Contents in <code>&lt;blockquote&gt;</code> are no longer all in italics.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="crucial-label">Crucial</span> <a href="2023-10-09.html"><time datetime="2023-10-09">2023-10-09</time></a>
+				<ul>
+					<li>
+						<span class="crucial">Distribution</span> Online versions are migrated to <code>https://albertttan.github.io/daily-bulletin/</code>.
+					</li>
+					<li>
+						<span class="crucial">Programming</span> Programs can now automatically join the sections into an HTML file.
+					</li>
+					<li>
+						<span class="crucial">Contents</span> Contents in Chinese are added: we are bilingual!
+					</li>
+					<li>
+						<span class="crucial">Styling</span> Sans serif fonts are used throughout the page to improve uniformity and readability.
+					</li>
+					<li>
+						<span class="crucial">Community</span> Pages that describe the project are created, including the one you are reading now.
+					</li>
+					<li>
+						<span class="major">Programming</span> Programs can now generate "On this Day", "In the News", and "Delicious Dinings" in Chinese.
+					</li>
+					<li>
+						<span class="major">Programming</span> Programs can now automatically update the tables.
+					</li>
+					<li>
+						<span class="major">Programming</span> Programs can now automatically embed pictures in HTML with Base 64. 
+					</li>
+					<li>
+						<span class="major">Contents</span> A new section "Exam Reminders" will be included when a series of exams are going on.
+					</li>
+					<li>
+						<span class="major">Styling</span> The CSS part is separated into a different file.
+					</li>
+					<li>
+						<span class="major">Styling</span> A JavaScript allow table rows to collapse and expand when needed.
+					</li>
+					<li>
+						<span class="major">Community</span> The Microsoft Form is split.
+					</li>
+					<li>
+						<span class="minor">Contents</span> The links to the online version are excluded from the online version. 
+					</li>
+					<li>
+						<span class="minor">Styling</span> Parentheses marking locations are excluded from corresponding <code>&lt;span&gt;</code> elements. 
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="minor-label">Minor</span> <a href="2023-10-13.html"><time datetime="2023-10-13">2023-10-13</time></a>
+				<ul>
+					<li>
+						<span class="minor">Contents</span> The Chinese translation of "Quotes" is slightly altered.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="major-label">Major</span> <a href="2023-10-16.html"><time datetime="2023-10-16">2023-10-16</time></a>
+				<ul>
+					<li>
+						<span class="major">Contents</span> Recurring contents in "The School Inspires" and "The School Recommends" are removed. 
+					</li>
+					<li>
+						<span class="minor">Styling</span> The margins of blockquotes are adjusted. 
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="minor-label">Minor</span> <a href="2023-10-23.html"><time datetime="2023-10-23">2023-10-23</time></a>
+				<ul>
+					<li>
+						<span class="minor">Contents</span> "Daily Inspiration" and "Promoted Contents" are swapped. 
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="minor-label">Minor</span> <a href="2023-10-25.html"><time datetime="2023-10-25">2023-10-25</time></a>
+				<ul>
+					<li>
+						<span class="minor">Contents</span> "Daily Inspiration" is moved down once more. 
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2>Regular Version</h2>
+		<ul>
+			<li>
+				<span class="major-label">Major</span> <a href="2023-11-20.html"><time datetime="2023-11-20">2023-11-20</time></a>
+				<ul>
+					<li>
+						<span class="major">Distribution</span> All students are added to the mailing list.
+					</li>
+					<li>
+						<span class="major">Contents</span> "Promoted Contents" is removed.
+					</li>
+					<li>
+						<span class="minor">Contents</span> Snacks are added to "Delicious Dinings".
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="major-label">Major</span> <a href="2023-11-27.html"><time datetime="2023-11-27">2023-11-27</time></a>
+				<ul>
+					<li>
+						<span class="major">Contents</span> "Delicious Dinings" is moved up.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="crucial-label">Crucial</span> <a href="2023-11-29.html"><time datetime="2023-11-29">2023-11-29</time></a>
+				<ul>
+					<li>
+						<span class="crucial">Contents</span> Deleted most inspirational contents inherited from The Week Ahead.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="minor-label">Minor</span> <a href="2024-03-18.html"><time datetime="2024-03-18">2024-03-18</time></a>
+				<ul>
+					<li>
+						<span class="minor">Contents</span> Inspiration sharers now have their Chinese names displayed as well.
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</article>
+	<footer>
+		<p><a href="./">Home Page</a> · <a href="archive.html">Archive</a> · <a href="mailto:s22505@ykpaoschool.cn">Contact</a></p>
+	</footer>
+</body>
+</html>
